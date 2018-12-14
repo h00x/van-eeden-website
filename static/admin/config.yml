@@ -1,6 +1,5 @@
 backend:
-  name: van-eeden-backend
-  repo: h00x/van-eeden-website
+  name: git-gateway
   branch: master
 
 media_folder: static/images
