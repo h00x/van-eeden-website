@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    title: 'van Eeden - Hyacinten kweeker',
+    description:
+      'Hyacinten met bol en wortel uit de Bollenstreek, Noordwijkerhout',
+    author: 'Dave Hoeks',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -17,12 +18,13 @@ module.exports = {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: 'http://localhost:1337',
-        contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
+        contentTypes: [
+          // List of the Content Types you want to be able to request from Gatsby.
           'headers',
           'contentblocks',
-          'imageslides'
-        ]
-      }
+          'imageslides',
+        ],
+      },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
