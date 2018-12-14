@@ -14,18 +14,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: 'gatsby-source-strapi',
-      options: {
-        apiURL: 'http://localhost:1337',
-        contentTypes: [
-          // List of the Content Types you want to be able to request from Gatsby.
-          'headers',
-          'contentblocks',
-          'imageslides',
-        ],
-      },
-    },
+    'gatsby-plugin-netlify-cms',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
