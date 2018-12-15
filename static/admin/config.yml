@@ -116,6 +116,8 @@ collections:
               widget: 'hidden',
               default: 'contact',
             }
+          - { label: Title, name: title, widget: string }
+          - { label: Buttontext, name: buttontext, widget: string }
           - { label: Email, name: email, widget: string }
           - { label: Address, name: address, widget: text }
           - { label: Phone Jaap, name: phoneJaap, widget: number }
