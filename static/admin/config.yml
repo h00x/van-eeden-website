@@ -9,7 +9,7 @@ collections:
   - name: homepage
     label: homepage
     files:
-      - file: 'content/header.md'
+      - file: 'src/content/header.md'
         name: header
         label: Header
         fields:
@@ -41,7 +41,7 @@ collections:
                   { label: Alt, name: alt, widget: string },
                 ],
             }
-      - file: 'content/first-block.md'
+      - file: 'src/content/first-block.md'
         name: firstBlock
         label: First block
         fields:
@@ -73,7 +73,7 @@ collections:
                   { label: Alt, name: alt, widget: string },
                 ],
             }
-      - file: 'content/image-slide.md'
+      - file: 'src/content/image-slide.md'
         name: imageSlide
         label: 'Image slide'
         fields:
@@ -84,7 +84,7 @@ collections:
             media_library:
               config:
                 multiple: true
-      - file: 'content/second-block.md'
+      - file: 'src/content/second-block.md'
         name: secondBlock
         label: 'Second block'
         fields:
@@ -106,7 +106,7 @@ collections:
                   { label: Alt, name: alt, widget: string },
                 ],
             }
-      - file: 'content/contact.md'
+      - file: 'src/content/contact.md'
         name: contact
         label: Contact
         fields:
