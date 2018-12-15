@@ -6,12 +6,117 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+  - name: homepage
+    label: homepage
+    files:
+      - file: 'content/header.md'
+        name: header
+        label: Header
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'header',
+            }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subeading, name: subheading, widget: string }
+          - {
+              label: Button,
+              name: button,
+              widget: object,
+              fields:
+                [
+                  { label: Buttontext, name: buttontext, widget: string },
+                  { label: Buttonlink, name: buttonlink, widget: string },
+                ],
+            }
+          - {
+              label: 'Background image',
+              name: backgroundImage,
+              widget: object,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: Alt, name: alt, widget: string },
+                ],
+            }
+      - file: 'content/first-block.md'
+        name: firstBlock
+        label: First block
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'first-block',
+            }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Body, name: body, widget: text }
+          - {
+              label: Button,
+              name: button,
+              widget: object,
+              fields:
+                [
+                  { label: Buttontext, name: buttontext, widget: string },
+                  { label: Buttonlink, name: buttonlink, widget: string },
+                ],
+            }
+          - {
+              label: Image,
+              name: image,
+              widget: object,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: Alt, name: alt, widget: string },
+                ],
+            }
+      - file: 'content/image-slide.md'
+        name: imageSlide
+        label: 'Image slide'
+        fields:
+          - label: 'Images'
+            name: 'images'
+            widget: 'image'
+            allow_multiple: true
+            media_library:
+              config:
+                multiple: true
+      - file: 'content/second-block.md'
+        name: secondBlock
+        label: 'Second block'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'second-block',
+            }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Body, name: body, widget: text }
+          - {
+              label: Image,
+              name: image,
+              widget: object,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: Alt, name: alt, widget: string },
+                ],
+            }
+      - file: 'content/contact.md'
+        name: contact
+        label: Contact
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'contact',
+            }
+          - { label: Email, name: email, widget: string }
+          - { label: Address, name: address, widget: text }
+          - { label: Phone Jaap, name: phoneJaap, widget: number }
+          - { label: Phone Rutger, name: phoneRutger, widget: number }
