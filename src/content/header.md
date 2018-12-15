@@ -6,5 +6,6 @@ button:
   buttontext: Neem contact op
 backgroundImage:
   alt: van-eeden-background-header
+  image: /images/van-eeden-header-bg.jpg
 ---
 
