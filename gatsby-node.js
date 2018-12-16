@@ -1,7 +1,15 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
 
-// You can delete this file if you're not using it
+  if (node.internal.type === 'MarkdownRemark') {
+    if (node.frontmatter.relpath && node.frontmatter.logo) {
+      const logopath = node.frontmatter.relpath + node.frontmatter.logo
+
+      createNodeField({
+        node,
+        name: 'logolink',
+        value: logopath,
+      })
+    }
+  }
+}

@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import ButtonWhite from './button-white'
-import Image from '../components/image'
 
 const TitleWrapper = styled.div`
   max-width: 50%;
@@ -23,14 +24,38 @@ const ImageWrapper = styled.div`
 `
 
 const HeaderImage = () => (
-  <ImageWrapper>
-    <TitleWrapper>
-      <h3>Test</h3>
-      <h1>Test</h1>
-      <ButtonWhite>Test</ButtonWhite>
-    </TitleWrapper>
-    <Image />
-  </ImageWrapper>
+  <StaticQuery
+    query={graphql`
+      query Header {
+        file(relativePath: { eq: "header.md" }) {
+          childMarkdownRemark {
+            frontmatter {
+              heading
+              subheading
+              button {
+                buttontext
+                buttonlink
+              }
+              backgroundImage {
+                alt
+                image
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <ImageWrapper>
+        <TitleWrapper>
+          {console.log(data)}
+          <h3>{data.file.childMarkdownRemark.frontmatter.subheading}</h3>
+          <h1>{data.file.childMarkdownRemark.frontmatter.heading}</h1>
+          <ButtonWhite>Test</ButtonWhite>
+        </TitleWrapper>
+      </ImageWrapper>
+    )}
+  />
 )
 
 export default HeaderImage

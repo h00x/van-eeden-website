@@ -14,6 +14,12 @@ collections:
         label: Header
         fields:
           - {
+              label: 'Relative Path',
+              name: 'relpath',
+              widget: 'hidden',
+              default: '../../..',
+            }
+          - {
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
@@ -46,6 +52,12 @@ collections:
         label: First block
         fields:
           - {
+              label: 'Relative Path',
+              name: 'relpath',
+              widget: 'hidden',
+              default: '../../..',
+            }
+          - {
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
@@ -77,6 +89,12 @@ collections:
         name: imageSlide
         label: 'Image slide'
         fields:
+          - {
+              label: 'Relative Path',
+              name: 'relpath',
+              widget: 'hidden',
+              default: '../../..',
+            }
           - label: 'Images'
             name: 'images'
             widget: 'image'
@@ -88,6 +106,12 @@ collections:
         name: secondBlock
         label: 'Second block'
         fields:
+          - {
+              label: 'Relative Path',
+              name: 'relpath',
+              widget: 'hidden',
+              default: '../../..',
+            }
           - {
               label: 'Template Key',
               name: 'templateKey',
