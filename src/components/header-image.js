@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import ButtonWhite from './button-white'
 
 const TitleWrapper = styled.div`
-  max-width: 50%;
+  width: 100%;
   z-index: 100;
   margin: 0 auto;
   text-align: center;
@@ -23,12 +23,34 @@ const ImageWrapper = styled.div`
   position: relative;
 `
 
+const HeadTitle = styled.h1`
+  color: #ffffff;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+`
+
+const SubTitle = styled.p`
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+`
+
 const HeaderImage = () => (
   <StaticQuery
     query={graphql`
       query Header {
         file(relativePath: { eq: "header.md" }) {
           childMarkdownRemark {
+            fields {
+              imagelink {
+                childImageSharp {
+                  fluid(maxWidth: 1000, quality: 80) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
             frontmatter {
               heading
               subheading
@@ -36,7 +58,7 @@ const HeaderImage = () => (
                 buttontext
                 buttonlink
               }
-              backgroundImage {
+              image {
                 alt
                 image
               }
@@ -48,11 +70,31 @@ const HeaderImage = () => (
     render={data => (
       <ImageWrapper>
         <TitleWrapper>
-          {console.log(data)}
-          <h3>{data.file.childMarkdownRemark.frontmatter.subheading}</h3>
-          <h1>{data.file.childMarkdownRemark.frontmatter.heading}</h1>
-          <ButtonWhite>Test</ButtonWhite>
+          <SubTitle>
+            {data.file.childMarkdownRemark.frontmatter.subheading}
+          </SubTitle>
+          <HeadTitle>
+            {data.file.childMarkdownRemark.frontmatter.heading}
+          </HeadTitle>
+          <ButtonWhite
+            to={data.file.childMarkdownRemark.frontmatter.button.buttonlink}
+          >
+            {data.file.childMarkdownRemark.frontmatter.button.buttontext}
+          </ButtonWhite>
         </TitleWrapper>
+        <Img
+          fluid={
+            data.file.childMarkdownRemark.fields.imagelink.childImageSharp.fluid
+          }
+          alt={data.file.childMarkdownRemark.frontmatter.image.alt}
+          style={{
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            height: '100%',
+            width: '100%',
+          }}
+        />
       </ImageWrapper>
     )}
   />

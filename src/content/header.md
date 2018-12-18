@@ -4,8 +4,8 @@ subheading: '- Een uniek product uit de Bollenstreek -'
 button:
   buttonlink: /
   buttontext: Neem contact op
-backgroundImage:
+image:
   alt: van-eeden-background-header
   image: /images/van-eeden-header-bg.jpg
+  relpath: ../../static
 ---
-

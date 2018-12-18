@@ -14,12 +14,6 @@ collections:
         label: Header
         fields:
           - {
-              label: 'Relative Path',
-              name: 'relpath',
-              widget: 'hidden',
-              default: '../../..',
-            }
-          - {
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
@@ -39,24 +33,24 @@ collections:
             }
           - {
               label: 'Background image',
-              name: backgroundImage,
+              name: image,
               widget: object,
               fields:
                 [
                   { label: Image, name: image, widget: image },
                   { label: Alt, name: alt, widget: string },
+                  {
+                    label: 'Relative Path',
+                    name: 'relpath',
+                    widget: 'hidden',
+                    default: '../../..',
+                  },
                 ],
             }
       - file: 'src/content/first-block.md'
         name: firstBlock
         label: First block
         fields:
-          - {
-              label: 'Relative Path',
-              name: 'relpath',
-              widget: 'hidden',
-              default: '../../..',
-            }
           - {
               label: 'Template Key',
               name: 'templateKey',
@@ -83,6 +77,12 @@ collections:
                 [
                   { label: Image, name: image, widget: image },
                   { label: Alt, name: alt, widget: string },
+                  {
+                    label: 'Relative Path',
+                    name: 'relpath',
+                    widget: 'hidden',
+                    default: '../../..',
+                  },
                 ],
             }
       - file: 'src/content/image-slide.md'
@@ -107,12 +107,6 @@ collections:
         label: 'Second block'
         fields:
           - {
-              label: 'Relative Path',
-              name: 'relpath',
-              widget: 'hidden',
-              default: '../../..',
-            }
-          - {
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
@@ -128,6 +122,12 @@ collections:
                 [
                   { label: Image, name: image, widget: image },
                   { label: Alt, name: alt, widget: string },
+                  {
+                    label: 'Relative Path',
+                    name: 'relpath',
+                    widget: 'hidden',
+                    default: '../../..',
+                  },
                 ],
             }
       - file: 'src/content/contact.md'
