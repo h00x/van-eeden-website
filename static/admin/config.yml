@@ -33,18 +33,12 @@ collections:
             }
           - {
               label: 'Background image',
-              name: image,
+              name: image_src,
               widget: object,
               fields:
                 [
-                  { label: Image, name: image, widget: image },
+                  { label: Image, name: image_link, widget: image },
                   { label: Alt, name: alt, widget: string },
-                  {
-                    label: 'Relative Path',
-                    name: 'relpath',
-                    widget: 'hidden',
-                    default: '../../..',
-                  },
                 ],
             }
       - file: 'src/content/first-block.md'
@@ -71,30 +65,18 @@ collections:
             }
           - {
               label: Image,
-              name: image,
+              name: image_src,
               widget: object,
               fields:
                 [
-                  { label: Image, name: image, widget: image },
+                  { label: Image, name: image_link, widget: image },
                   { label: Alt, name: alt, widget: string },
-                  {
-                    label: 'Relative Path',
-                    name: 'relpath',
-                    widget: 'hidden',
-                    default: '../../..',
-                  },
                 ],
             }
       - file: 'src/content/image-slide.md'
         name: imageSlide
         label: 'Image slide'
         fields:
-          - {
-              label: 'Relative Path',
-              name: 'relpath',
-              widget: 'hidden',
-              default: '../../..',
-            }
           - label: 'Images'
             name: 'images'
             widget: 'image'
@@ -116,18 +98,12 @@ collections:
           - { label: Body, name: body, widget: text }
           - {
               label: Image,
-              name: image,
+              name: image_src,
               widget: object,
               fields:
                 [
-                  { label: Image, name: image, widget: image },
+                  { label: Image, name: image_link, widget: image },
                   { label: Alt, name: alt, widget: string },
-                  {
-                    label: 'Relative Path',
-                    name: 'relpath',
-                    widget: 'hidden',
-                    default: '../../..',
-                  },
                 ],
             }
       - file: 'src/content/contact.md'

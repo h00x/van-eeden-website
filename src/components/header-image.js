@@ -42,15 +42,6 @@ const HeaderImage = () => (
       query Header {
         file(relativePath: { eq: "header.md" }) {
           childMarkdownRemark {
-            fields {
-              imagelink {
-                childImageSharp {
-                  fluid(maxWidth: 1000, quality: 80) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
             frontmatter {
               heading
               subheading
@@ -58,9 +49,15 @@ const HeaderImage = () => (
                 buttontext
                 buttonlink
               }
-              image {
+              image_src {
                 alt
-                image
+                image_link {
+                  childImageSharp {
+                    fluid(maxWidth: 1000, quality: 80) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
@@ -84,9 +81,10 @@ const HeaderImage = () => (
         </TitleWrapper>
         <Img
           fluid={
-            data.file.childMarkdownRemark.fields.imagelink.childImageSharp.fluid
+            data.file.childMarkdownRemark.frontmatter.image_src.image_link
+              .childImageSharp.fluid
           }
-          alt={data.file.childMarkdownRemark.frontmatter.image.alt}
+          alt={data.file.childMarkdownRemark.frontmatter.image_src.alt}
           style={{
             position: 'absolute',
             left: 0,

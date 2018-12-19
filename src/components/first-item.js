@@ -34,23 +34,21 @@ const FirstItem = () => {
         query FirstBlock {
           file(relativePath: { eq: "first-block.md" }) {
             childMarkdownRemark {
-              fields {
-                imagelink {
-                  childImageSharp {
-                    fluid(quality: 80) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-              }
               frontmatter {
                 heading
                 button {
                   buttontext
                   buttonlink
                 }
-                image {
+                image_src {
                   alt
+                  image_link {
+                    childImageSharp {
+                      fluid(maxWidth: 1000, quality: 80) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                 }
               }
               rawMarkdownBody
@@ -73,10 +71,10 @@ const FirstItem = () => {
           </TextContent>
           <Image
             fluid={
-              data.file.childMarkdownRemark.fields.imagelink.childImageSharp
-                .fluid
+              data.file.childMarkdownRemark.frontmatter.image_src.image_link
+                .childImageSharp.fluid
             }
-            alt={data.file.childMarkdownRemark.frontmatter.image.alt}
+            alt={data.file.childMarkdownRemark.frontmatter.image_src.alt}
           />
         </ContentWrapper>
       )}
