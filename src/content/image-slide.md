@@ -1,5 +1,5 @@
 ---
-images: /images/hyacint-1.jpg
 image:
   relpath: ../../static
+  image: /images/hyacint-1.jpg
 ---
