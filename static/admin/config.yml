@@ -79,11 +79,10 @@ collections:
         fields:
           - label: 'Images'
             name: 'images'
-            widget: 'image'
-            allow_multiple: true
-            media_library:
-              config:
-                multiple: true
+            widget: 'list'
+            fields:
+              - { label: Image, name: image_list_item, widget: image }
+              - { label: Alt, name: alt, widget: string }
       - file: 'src/content/second-block.md'
         name: secondBlock
         label: 'Second block'
