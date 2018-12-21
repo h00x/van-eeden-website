@@ -115,6 +115,16 @@ collections:
               widget: 'hidden',
               default: 'contact',
             }
+          - {
+              label: Image,
+              name: image_src,
+              widget: object,
+              fields:
+                [
+                  { label: Image, name: image_link, widget: image },
+                  { label: Alt, name: alt, widget: string },
+                ],
+            }
           - { label: Title, name: title, widget: string }
           - { label: Buttontext, name: buttontext, widget: string }
           - { label: Email, name: email, widget: string }
