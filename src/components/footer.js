@@ -3,13 +3,17 @@ import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-const BetweenBlock = () => {
+const Footer = () => {
   const Wrapper = styled.div`
     overflow: hidden;
     position: relative;
-    height: 10rem;
     width: 100%;
-    text-align: center;
+    text-align: left;
+    padding: 2rem;
+  `
+
+  const Text = styled.p`
+    margin: 0;
   `
 
   return (
@@ -27,7 +31,7 @@ const BetweenBlock = () => {
       `}
       render={data => (
         <Wrapper>
-          <h3>Test</h3>
+          <Text>© Copyright 2015 Firma van Eeden Rzn.</Text>
           <Img
             fluid={data.file.childImageSharp.fluid}
             alt=""
@@ -46,4 +50,4 @@ const BetweenBlock = () => {
   )
 }
 
-export default BetweenBlock
+export default Footer

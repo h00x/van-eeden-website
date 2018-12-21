@@ -61,14 +61,14 @@ const SecondItem = () => {
           }
           hyacintOne: file(relativePath: { eq: "hyacint-bg1.jpg" }) {
             childImageSharp {
-              fixed(width: 400, quality: 80) {
+              fixed(width: 283, quality: 80) {
                 ...GatsbyImageSharpFixed
               }
             }
           }
           hyacintTwo: file(relativePath: { eq: "hyacint-bg2.jpg" }) {
             childImageSharp {
-              fixed(width: 400, quality: 80) {
+              fixed(width: 312, quality: 80) {
                 ...GatsbyImageSharpFixed
               }
             }

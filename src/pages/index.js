@@ -4,9 +4,11 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import HeaderImage from '../components/header-image'
 import FirstItem from '../components/first-item'
+import ImageGallery from '../components/image-gallery'
 import SecondItem from '../components/second-item'
 import BetweenBlock from '../components/between-block'
-import ImageGallery from '../components/image-gallery'
+import ContactBlock from '../components/contact'
+import Footer from '../components/footer'
 import '../../node_modules/slick-carousel/slick/slick.css'
 import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
@@ -28,6 +30,8 @@ const IndexPage = () => (
     <ImageGallery />
     <SecondItem />
     <BetweenBlock />
+    <ContactBlock />
+    <Footer />
   </Layout>
 )
 
