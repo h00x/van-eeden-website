@@ -5,36 +5,64 @@ import Img from 'gatsby-image'
 
 const ContactBlock = () => {
   const ContentWrapper = styled.div`
-    margin: 6rem 0;
+    padding: 6rem 0;
     text-align: center;
     position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
   `
 
   const Heading = styled.h2`
-    box-shadow: -16px 48px 0px 0px rgba(250, 255, 244, 1);
     margin-bottom: 4rem;
+    display: inline-block;
+    position: relative;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 3rem;
+      top: 2rem;
+      background-color: rgba(250, 255, 244, 1);
+      position: absolute;
+      z-index: -1;
+    }
   `
 
   const TopWrapper = styled.div`
     width: 50%;
     margin: 0 auto;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
   `
 
   const FormWrapper = styled.div`
     width: 50%;
     display: inline-block;
     vertical-align: top;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
   `
 
   const ContactDataWrapper = styled.div`
     width: 50%;
     display: inline-block;
     vertical-align: top;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
   `
 
   const Form = styled.form`
     width: 80%;
-    margin: 0 auto;
+    float: right;
+    margin-right: 1rem;
+    @media (max-width: 960px) {
+      width: 90%;
+      float: none;
+      margin: 3rem auto;
+    }
   `
 
   const FormGroup = styled.div`
@@ -95,14 +123,33 @@ const ContactBlock = () => {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     padding: 2rem;
     width: 80%;
-    margin: 0 auto;
     text-align: left;
+    margin-left: 1rem;
+    @media (max-width: 960px) {
+      width: 90%;
+      margin: 0;
+      margin: 0 auto;
+    }
   `
 
   const ContactWrapper = styled.div`
     margin-top: -10rem;
     position: relative;
     z-index: 100;
+  `
+  const ContactButton = styled.button`
+    background-image: linear-gradient(135deg, #cb88d7 0%, #a668b2 100%);
+    background-color: #a668b2;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+    border: 0;
+    display: inline-block;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
   `
 
   return (
@@ -135,7 +182,7 @@ const ContactBlock = () => {
         }
       `}
       render={data => (
-        <ContentWrapper>
+        <ContentWrapper id="contact-item">
           <TopWrapper>
             <Heading>{data.file.childMarkdownRemark.frontmatter.title}</Heading>
             <Img
@@ -170,13 +217,70 @@ const ContactBlock = () => {
                   <FormLabel htmlFor="message">Bericht</FormLabel>
                 </FormGroup>
                 <div>
-                  <button type="submit">Verstuur</button>
+                  <ContactButton type="submit">Verstuur</ContactButton>
                 </div>
               </Form>
             </FormWrapper>
             <ContactDataWrapper>
               <ContactData>
-                <p>Text</p>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <strong>Email</strong>
+                      </td>
+                      <td>
+                        <a
+                          href={`mailto:${
+                            data.file.childMarkdownRemark.frontmatter.email
+                          }`}
+                        >
+                          {data.file.childMarkdownRemark.frontmatter.email}
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Adres</strong>
+                      </td>
+                      <td
+                        dangerouslySetInnerHTML={{
+                          __html: `${data.file.childMarkdownRemark.frontmatter.address.replace(
+                            /(?:\n)/g,
+                            '<br />'
+                          )}`,
+                        }}
+                      />
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Tel</strong>
+                      </td>
+                      <td>
+                        <a
+                          href={`tel:${
+                            data.file.childMarkdownRemark.frontmatter.phoneJaap
+                          }`}
+                        >
+                          {data.file.childMarkdownRemark.frontmatter.phoneJaap}
+                        </a>{' '}
+                        Jaap van Eeden <br />
+                        <a
+                          href={`tel:${
+                            data.file.childMarkdownRemark.frontmatter
+                              .phoneRutger
+                          }`}
+                        >
+                          {
+                            data.file.childMarkdownRemark.frontmatter
+                              .phoneRutger
+                          }
+                        </a>{' '}
+                        Rutger van Eeden
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </ContactData>
             </ContactDataWrapper>
           </ContactWrapper>

@@ -4,6 +4,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -43,6 +44,11 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: #a668b2;
+  text-decoration: none;
+}
+a:hover {
+  color: #cb88d7;
 }
 a:active,
 a:hover {
@@ -186,7 +192,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 100%/1.5em 'Lato', Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }

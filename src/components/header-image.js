@@ -11,9 +11,9 @@ const TitleWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
 `
 
 const ImageWrapper = styled.div`
@@ -21,12 +21,31 @@ const ImageWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   position: relative;
+  @media (max-width: 480px) {
+    height: 98vh;
+  }
 `
 
 const HeadTitle = styled.h1`
   color: #ffffff;
   font-size: 6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: '';
+    width: 100%;
+    height: 130%;
+    left: -2rem;
+    top: 2rem;
+    background-color: rgba(250, 255, 244, 0.2);
+    position: absolute;
+    z-index: -1;
+  }
+  @media (max-width: 480px) {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
 `
 
 const SubTitle = styled.p`
@@ -34,6 +53,12 @@ const SubTitle = styled.p`
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.5rem;
+  line-height: 2rem;
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
 `
 
 const HeaderImage = () => (
@@ -70,9 +95,11 @@ const HeaderImage = () => (
           <SubTitle>
             {data.file.childMarkdownRemark.frontmatter.subheading}
           </SubTitle>
-          <HeadTitle>
-            {data.file.childMarkdownRemark.frontmatter.heading}
-          </HeadTitle>
+          <div style={{ display: 'block' }}>
+            <HeadTitle>
+              {data.file.childMarkdownRemark.frontmatter.heading}
+            </HeadTitle>
+          </div>
           <ButtonWhite
             to={data.file.childMarkdownRemark.frontmatter.button.buttonlink}
           >

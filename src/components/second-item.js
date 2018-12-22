@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 
 const SecondItem = () => {
   const ContentWrapper = styled.div`
-    margin: 6rem 0;
+    padding: 6rem 0;
     text-align: center;
     position: relative;
   `
@@ -13,10 +13,25 @@ const SecondItem = () => {
   const TextWrapper = styled.div`
     width: 50%;
     margin: 0 auto;
+    @media (max-width: 480px) {
+      width: 90%;
+    }
   `
 
   const Heading = styled.h2`
-    box-shadow: -16px 48px 0px 0px rgba(250, 255, 244, 1);
+    margin-bottom: 2rem;
+    display: inline-block;
+    position: relative;
+    &:after {
+      content: '';
+      width: 60%;
+      height: 100%;
+      left: 6rem;
+      top: 2rem;
+      background-color: rgba(250, 255, 244, 1);
+      position: absolute;
+      z-index: -1;
+    }
   `
 
   const Text = styled.p`
@@ -28,6 +43,15 @@ const SecondItem = () => {
     top: 8rem;
     left: 5%;
     z-index: -100;
+    @media (max-width: 960px) {
+      left: -10%;
+    }
+    @media (max-width: 720px) {
+      left: -20%;
+    }
+    @media (max-width: 480px) {
+      display: none !important;
+    }
   `
 
   const HyacintTwo = styled(Img)`
@@ -35,6 +59,9 @@ const SecondItem = () => {
     top: 4rem;
     right: 5%;
     z-index: -100;
+    @media (max-width: 960px) {
+      display: none !important;
+    }
   `
 
   return (
@@ -76,7 +103,7 @@ const SecondItem = () => {
         }
       `}
       render={data => (
-        <ContentWrapper>
+        <ContentWrapper id="second-item">
           <TextWrapper>
             <Heading>
               {data.file.childMarkdownRemark.frontmatter.heading}

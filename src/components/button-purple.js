@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const LinkButton = styled(Link)`
+const LinkButton = styled.a`
   background-image: linear-gradient(135deg, #cb88d7 0%, #a668b2 100%);
   background-color: #a668b2;
   color: #ffffff;
@@ -17,7 +16,7 @@ const LinkButton = styled(Link)`
 `
 
 const ButtonWhite = ({ children, to }) => (
-  <LinkButton to={to}>{children}</LinkButton>
+  <LinkButton href={to}>{children}</LinkButton>
 )
 
 export default ButtonWhite

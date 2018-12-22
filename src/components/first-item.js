@@ -7,18 +7,43 @@ import ButtonPurple from './button-purple'
 
 const FirstItem = () => {
   const ContentWrapper = styled.div`
-    margin: 6rem 0;
+    padding: 6rem 0;
+    text-align: right;
+    @media (max-width: 960px) {
+      text-align: center;
+    }
   `
 
   const TextContent = styled.div`
     width: 50%;
+    max-width: 50rem;
     padding: 0 6rem;
     display: inline-block;
     vertical-align: middle;
+    text-align: left;
+    @media (max-width: 960px) {
+      text-align: center;
+      width: 90%;
+      padding: 0;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
   `
 
   const Heading = styled.h2`
-    box-shadow: -16px 48px 0px 0px rgba(250, 255, 244, 1);
+    margin-bottom: 2rem;
+    display: inline-block;
+    position: relative;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 1rem;
+      top: 2rem;
+      background-color: rgba(250, 255, 244, 1);
+      position: absolute;
+      z-index: -1;
+    }
   `
 
   const Image = styled(Img)`
@@ -26,6 +51,9 @@ const FirstItem = () => {
     display: inline-block;
     vertical-align: middle;
     box-shadow: -16px 48px 0px 0px rgba(250, 255, 244, 1);
+    @media (max-width: 480px) {
+      width: 100%;
+    }
   `
 
   return (
@@ -57,7 +85,7 @@ const FirstItem = () => {
         }
       `}
       render={data => (
-        <ContentWrapper>
+        <ContentWrapper id="first-item">
           <TextContent>
             <Heading>
               {data.file.childMarkdownRemark.frontmatter.heading}

@@ -14,6 +14,19 @@ const Footer = () => {
 
   const Text = styled.p`
     margin: 0;
+    display: inline-block;
+  `
+
+  const Menu = styled.ul`
+    text-align: right;
+    padding-right: 2rem;
+    margin: 0;
+    float: right;
+    & li {
+      display: inline-block;
+      padding-left: 3rem;
+      margin: 0;
+    }
   `
 
   return (
@@ -27,11 +40,56 @@ const Footer = () => {
               }
             }
           }
+          logo: file(relativePath: { eq: "van-eeden-logo.png" }) {
+            childImageSharp {
+              fixed(width: 229) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+          menuOne: file(relativePath: { eq: "first-block.md" }) {
+            childMarkdownRemark {
+              frontmatter {
+                heading
+              }
+            }
+          }
+          menuTwo: file(relativePath: { eq: "second-block.md" }) {
+            childMarkdownRemark {
+              frontmatter {
+                heading
+              }
+            }
+          }
+          menuThree: file(relativePath: { eq: "contact.md" }) {
+            childMarkdownRemark {
+              frontmatter {
+                title
+              }
+            }
+          }
         }
       `}
       render={data => (
         <Wrapper>
           <Text>© Copyright 2015 Firma van Eeden Rzn.</Text>
+          <Menu>
+            <li>
+              <a href="#first-item">
+                {data.menuOne.childMarkdownRemark.frontmatter.heading}
+              </a>
+            </li>
+            <li>
+              <a href="#second-item">
+                {data.menuTwo.childMarkdownRemark.frontmatter.heading}
+              </a>
+            </li>
+            <li>
+              <a href="#contact-item">
+                {data.menuThree.childMarkdownRemark.frontmatter.title}
+              </a>
+            </li>
+          </Menu>
           <Img
             fluid={data.file.childImageSharp.fluid}
             alt=""

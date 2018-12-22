@@ -7,9 +7,12 @@ const BetweenBlock = () => {
   const Wrapper = styled.div`
     overflow: hidden;
     position: relative;
-    height: 10rem;
+    padding: 4rem;
     width: 100%;
     text-align: center;
+    & h3 {
+      margin: 0;
+    }
   `
 
   return (
