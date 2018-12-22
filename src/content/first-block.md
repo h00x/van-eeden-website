@@ -1,7 +1,7 @@
 ---
 heading: Het product
 button:
-  buttonlink: /
+  buttonlink: '#contact-item'
   buttontext: Neem contact op
 image_src:
   alt: Hyacinten met bol in een krans
