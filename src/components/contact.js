@@ -2,6 +2,15 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faEnvelope,
+  faMapMarkerAlt,
+  faPhone,
+} from '@fortawesome/free-solid-svg-icons'
+
+library.add(faEnvelope, faMapMarkerAlt, faPhone)
 
 const ContactBlock = () => {
   const ContentWrapper = styled.div`
@@ -116,6 +125,7 @@ const ContactBlock = () => {
 
   const FormTextArea = styled.textarea`
     ${InputStyle}
+    resize: none;
   `
 
   const ContactData = styled.div`
@@ -145,11 +155,16 @@ const ContactBlock = () => {
     text-decoration: none;
     transition: opacity 0.3s ease-in-out;
     border: 0;
+    outline: 0;
     display: inline-block;
     &:hover {
       opacity: 0.8;
       cursor: pointer;
     }
+  `
+
+  const ContactTitle = styled.strong`
+    margin-left: 1rem;
   `
 
   return (
@@ -227,7 +242,8 @@ const ContactBlock = () => {
                   <tbody>
                     <tr>
                       <td>
-                        <strong>Email</strong>
+                        <FontAwesomeIcon icon="envelope" />
+                        <ContactTitle>Email</ContactTitle>
                       </td>
                       <td>
                         <a
@@ -241,7 +257,8 @@ const ContactBlock = () => {
                     </tr>
                     <tr>
                       <td>
-                        <strong>Adres</strong>
+                        <FontAwesomeIcon icon="map-marker-alt" />
+                        <ContactTitle>Adres</ContactTitle>
                       </td>
                       <td
                         dangerouslySetInnerHTML={{
@@ -254,7 +271,8 @@ const ContactBlock = () => {
                     </tr>
                     <tr>
                       <td>
-                        <strong>Tel</strong>
+                        <FontAwesomeIcon icon="phone" />
+                        <ContactTitle>Tel</ContactTitle>
                       </td>
                       <td>
                         <a

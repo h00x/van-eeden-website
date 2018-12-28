@@ -11,9 +11,7 @@ const TitleWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -70%);
+  top: 40%;
 `
 
 const ImageWrapper = styled.div`
@@ -21,7 +19,7 @@ const ImageWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   position: relative;
-  @media (max-width: 480px) {
+  @media (max-width: 800px) {
     height: 98vh;
   }
 `
@@ -41,6 +39,9 @@ const HeadTitle = styled.h1`
     background-color: rgba(250, 255, 244, 0.2);
     position: absolute;
     z-index: -1;
+  }
+  @media (max-width: 800px) {
+    margin-bottom: 2rem;
   }
   @media (max-width: 480px) {
     font-size: 4rem;

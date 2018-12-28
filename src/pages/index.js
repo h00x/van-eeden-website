@@ -6,7 +6,6 @@ import HeaderImage from '../components/header-image'
 import FirstItem from '../components/first-item'
 import ImageGallery from '../components/image-gallery'
 import SecondItem from '../components/second-item'
-import BetweenBlock from '../components/between-block'
 import ContactBlock from '../components/contact'
 import Footer from '../components/footer'
 import '../../node_modules/slick-carousel/slick/slick.css'
@@ -29,7 +28,6 @@ const IndexPage = () => (
     <FirstItem />
     <ImageGallery />
     <SecondItem />
-    <BetweenBlock />
     <ContactBlock />
     <Footer />
   </Layout>

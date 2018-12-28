@@ -12,16 +12,19 @@ const Navigation = styled.nav`
   height: 6rem;
   width: 100%;
   margin-top: 3rem;
+  @media (max-width: 960px) {
+    text-align: center;
+  }
 `
 
 const LogoWrapper = styled.div`
   position: absolute;
-  top: -2rem;
+  top: -3rem;
   left: 2rem;
   @media (max-width: 960px) {
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    position: relative;
+    top: -3rem;
+    left: 0;
   }
 `
 
@@ -32,9 +35,16 @@ const Menu = styled.ul`
   margin: 0;
   & li {
     display: inline-block;
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding-left: 3rem;
     margin: 0;
+    & a {
+      color: #546341;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: #99b27a;
+      }
+    }
   }
   @media (max-width: 960px) {
     display: none;

@@ -8,6 +8,7 @@ const SecondItem = () => {
     padding: 6rem 0;
     text-align: center;
     position: relative;
+    border-bottom: 1px solid #edefeb;
   `
 
   const TextWrapper = styled.div`

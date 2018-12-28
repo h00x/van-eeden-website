@@ -12,6 +12,7 @@ const LinkButton = styled.a`
   display: inline-block;
   &:hover {
     opacity: 0.8;
+    color: white;
   }
 `
 
