@@ -58,7 +58,7 @@ const Header = ({ siteTitle }) => (
         logo: file(relativePath: { eq: "van-eeden-logo.png" }) {
           childImageSharp {
             fixed(width: 229) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
