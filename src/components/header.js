@@ -1,4 +1,4 @@
-import { StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
@@ -11,7 +11,7 @@ const Navigation = styled.nav`
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   height: 6rem;
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 4rem;
   @media (max-width: 960px) {
     text-align: center;
   }
@@ -19,11 +19,10 @@ const Navigation = styled.nav`
 
 const LogoWrapper = styled.div`
   position: absolute;
-  top: -3rem;
+  top: -4rem;
   left: 2rem;
   @media (max-width: 960px) {
     position: relative;
-    top: -3rem;
     left: 0;
   }
 `
