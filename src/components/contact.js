@@ -141,6 +141,11 @@ const ContactBlock = () => {
     width: 80%;
     text-align: left;
     margin-left: 1rem;
+    @media (max-width: 480px) {
+      & td {
+        display: block;
+      }
+    }
     @media (max-width: 960px) {
       width: 90%;
       margin: 0;
@@ -247,7 +252,7 @@ const ContactBlock = () => {
                 <table>
                   <tbody>
                     <tr>
-                      <td style={{ width: '33%' }}>
+                      <td>
                         <FontAwesomeIcon icon="envelope" />
                         <ContactTitle>Email</ContactTitle>
                       </td>
