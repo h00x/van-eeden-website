@@ -125,12 +125,13 @@ const ContactBlock = () => {
 
   const FormInput = styled.input`
     ${InputStyle}
+    height: 3.5rem;
   `
 
   const FormTextArea = styled.textarea`
     ${InputStyle}
     resize: none;
-    height: 7rem;
+    height: 6.5rem;
   `
 
   const ContactData = styled.div`
