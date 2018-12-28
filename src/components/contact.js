@@ -34,6 +34,10 @@ const ContactBlock = () => {
       background-color: rgba(250, 255, 244, 1);
       position: absolute;
       z-index: -1;
+      @media (max-width: 480px) {
+        width: 80%;
+        left: 1rem;
+      }
     }
   `
 
@@ -242,7 +246,7 @@ const ContactBlock = () => {
                 <table>
                   <tbody>
                     <tr>
-                      <td>
+                      <td style={{ width: '33%' }}>
                         <FontAwesomeIcon icon="envelope" />
                         <ContactTitle>Email</ContactTitle>
                       </td>

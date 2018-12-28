@@ -10,6 +10,9 @@ const Footer = () => {
     width: 100%;
     text-align: left;
     padding: 2rem;
+    @media (max-width: 960px) {
+      text-align: center;
+    }
   `
 
   const Text = styled.p`
@@ -26,6 +29,13 @@ const Footer = () => {
       display: inline-block;
       padding-left: 3rem;
       margin: 0;
+    }
+    @media (max-width: 960px) {
+      text-align: center;
+      float: none;
+      & li {
+        display: block;
+      }
     }
   `
 
