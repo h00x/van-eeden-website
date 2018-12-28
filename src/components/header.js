@@ -31,6 +31,7 @@ const Menu = styled.ul`
   text-align: right;
   padding-right: 2rem;
   line-height: 6rem;
+  list-style: none;
   margin: 0;
   & li {
     display: inline-block;
