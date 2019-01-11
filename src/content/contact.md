@@ -1,7 +1,7 @@
 ---
 image_src:
   alt: Jaap en Rutger van Eeden
-  image_link: /images/jaap-rutger-van-eeden.jpg
+  image_link: /images/contact-bg.jpg
 title: Neem contact op
 buttontext: Verstuur
 email: info@firmavaneeden.nl
