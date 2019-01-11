@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import ButtonWhite from './button-white'
 
 const TitleWrapper = styled.div`
-  width: 100%;
+  max-width: 960px;
   z-index: 100;
   margin: 0 auto;
   text-align: center;
@@ -19,6 +19,7 @@ const ImageWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   position: relative;
+  text-align: center;
   @media (max-width: 800px) {
     height: 98vh;
   }
