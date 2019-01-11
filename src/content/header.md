@@ -1,5 +1,5 @@
 ---
-heading: Hycinten met bol
+heading: Volledige hyacinten met wortels en bol
 subheading: '- Een uniek product uit de Bollenstreek -'
 button:
   buttonlink: '#contact-item'
