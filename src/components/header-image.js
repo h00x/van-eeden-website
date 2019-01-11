@@ -8,8 +8,8 @@ import ButtonWhite from './button-white'
 const TitleWrapper = styled.div`
   max-width: 960px;
   z-index: 100;
-  margin: 0 auto;
-  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   top: 40%;
 `
