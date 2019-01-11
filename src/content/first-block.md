@@ -7,5 +7,5 @@ image_src:
   alt: Hyacinten met bol in een krans
   image_link: /images/blok-1-img.jpg
 ---
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque quam quam, in lacinia dui hendrerit ac. Nullam volutpat quis orci a porttitor. Pellentesque sit amet volutpat ligula. Sed facilisis laoreet mi, nec condimentum ligula porttitor sed. Mauris aliquet nisi lobortis tortor tempus, vel fermentum lorem imperdiet. Longer text.
+Rond de 2e week van december zijn de hyacinten met bol beschikbaar, in de kleuren wit, roze en paars.
+Vijftien weken eerder zijn de hyacint bollen op water geplant. Door deze speciale techniek blijven de wortelen schoon, wit en direct klaar om verpakt te worden. In deze periode hebben de hyacinten genoeg water opgenomen om volledig in bloei te komen, dus ze hoeven niet meer voorzien te worden van water.
