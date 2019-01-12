@@ -8,10 +8,11 @@ import ButtonWhite from './button-white'
 const TitleWrapper = styled.div`
   max-width: 960px;
   z-index: 100;
-  left: 50%;
-  transform: translateX(-50%);
   position: absolute;
   top: 40%;
+  margin: 0 auto;
+  left: 0; 
+  right: 0;
 `
 
 const ImageWrapper = styled.div`
@@ -34,7 +35,7 @@ const HeadTitle = styled.h1`
   &:after {
     content: '';
     width: 100%;
-    height: 130%;
+    height: 110%;
     left: -2rem;
     top: 2rem;
     background-color: rgba(250, 255, 244, 0.2);
