@@ -16,7 +16,7 @@ const TitleWrapper = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  height: 85vh;
+  height: 90vh;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -28,25 +28,16 @@ const ImageWrapper = styled.div`
 
 const HeadTitle = styled.h1`
   color: #ffffff;
-  font-size: 6rem;
-  margin-bottom: 6rem;
+  font-size: 5rem;
+  margin-bottom: 3rem;
   display: inline-block;
   position: relative;
-  &:after {
-    content: '';
-    width: 100%;
-    height: 110%;
-    left: -2rem;
-    top: 2rem;
-    background-color: rgba(250, 255, 244, 0.2);
-    position: absolute;
-    z-index: -1;
-  }
   @media (max-width: 800px) {
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    margin: 0 1rem 2rem 1rem;
   }
   @media (max-width: 480px) {
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
 `

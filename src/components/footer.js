@@ -39,6 +39,8 @@ const Footer = () => {
     }
   `
 
+  const date = new Date()
+
   return (
     <StaticQuery
       query={graphql`
@@ -82,7 +84,7 @@ const Footer = () => {
       `}
       render={data => (
         <Wrapper>
-          <Text>© Copyright 2015 Firma van Eeden Rzn.</Text>
+          <Text>© Copyright {date.getFullYear().toString()} Firma van Eeden Rzn.</Text>
           <Menu>
             <li>
               <a href="#first-item">
