@@ -113,7 +113,8 @@ const ContactBlock = () => {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     transition: border 0.2s ease-in-out;
     &:focus,
-    &:valid {
+    &:valid,
+    &:invalid {
       border-bottom: 2px solid #a668b2;
       + label {
         font-size: 75%;
@@ -235,7 +236,7 @@ const ContactBlock = () => {
                   <FormLabel htmlFor="name">Naam</FormLabel>
                 </FormGroup>
                 <FormGroup>
-                  <FormInput type="text" name="email" id="email" required />
+                  <FormInput type="email" name="email" id="email" required />
                   <FormLabel htmlFor="email">E-mailadres</FormLabel>
                 </FormGroup>
                 <FormGroup>
@@ -260,7 +261,7 @@ const ContactBlock = () => {
                         <a
                           href={`mailto:${
                             data.file.childMarkdownRemark.frontmatter.email
-                          }`}
+                            }`}
                         >
                           {data.file.childMarkdownRemark.frontmatter.email}
                         </a>
@@ -289,7 +290,7 @@ const ContactBlock = () => {
                         <a
                           href={`tel:${
                             data.file.childMarkdownRemark.frontmatter.phoneJaap
-                          }`}
+                            }`}
                         >
                           {data.file.childMarkdownRemark.frontmatter.phoneJaap}
                         </a>{' '}
@@ -298,7 +299,7 @@ const ContactBlock = () => {
                           href={`tel:${
                             data.file.childMarkdownRemark.frontmatter
                               .phoneRutger
-                          }`}
+                            }`}
                         >
                           {
                             data.file.childMarkdownRemark.frontmatter
