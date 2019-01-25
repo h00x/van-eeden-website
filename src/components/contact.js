@@ -114,12 +114,14 @@ const ContactBlock = () => {
     transition: border 0.2s ease-in-out;
     &:focus,
     &:valid {
-      border-bottom: 2px solid #a668b2;
       + label {
         font-size: 75%;
         transform: translate3d(0, -30%, 0);
         opacity: 1;
       }
+    }
+    &:focus {
+      border-bottom: 2px solid #a668b2;
     }
   `
 
