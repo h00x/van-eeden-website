@@ -1,5 +1,6 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import Header from '../components/header'
 import Layout from '../components/layout'
@@ -13,40 +14,41 @@ import Footer from '../components/footer'
 import '../../node_modules/slick-carousel/slick/slick.css'
 import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
-const IndexPage = () => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Layout>
-        <SEO
-          title="Home"
-          keywords={[
-            'hyacinten',
-            'kweekers',
-            'bollenstreek',
-            'noordwijkerhout',
-            'van eeden',
-            'hyacint met bol',
-          ]}
-        />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <HeaderImage />
-        <FirstItem />
-        <ImageGallery />
-        <SecondItem />
-        <ContactBlock />
-        <Footer />
-      </Layout>
-    )}
-  />
+const IndexPage = ({ data }) => (
+  <Layout>
+    <SEO
+      title="Home"
+      keywords={[
+        'hyacinten',
+        'kweekers',
+        'bollenstreek',
+        'noordwijkerhout',
+        'van eeden',
+        'hyacint met bol',
+      ]}
+    />
+    <Header siteTitle={data.site.siteMetadata.title} />
+    <HeaderImage />
+    <FirstItem />
+    <ImageGallery />
+    <SecondItem />
+    <ContactBlock />
+    <Footer />
+  </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
+
+IndexPage.propTypes = {
+  data: PropTypes.object,
+}
