@@ -6,6 +6,6 @@ button:
   buttontext: Neem contact op
 image_src:
   alt: van-eeden-background-header
-  image_link: /images/van-eeden-header-bg.jpg
+  image_link: /images/hyacint-header.jpg
 ---
 
