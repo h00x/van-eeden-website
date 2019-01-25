@@ -47,7 +47,7 @@ const NotFoundPage = () => {
               fixed={data.logo.childImageSharp.fixed}
               alt={data.site.siteMetadata.title}
             />
-            <h1>404 Pagina niet gevonden.</h1>
+            <h1>404 Pagina niet gevonden</h1>
             <Link to="/">Ga naar de Homepage</Link>
           </ContentWrapper>
         </Layout>
