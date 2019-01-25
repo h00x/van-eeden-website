@@ -261,7 +261,7 @@ const ContactBlock = () => {
                         <a
                           href={`mailto:${
                             data.file.childMarkdownRemark.frontmatter.email
-                            }`}
+                          }`}
                         >
                           {data.file.childMarkdownRemark.frontmatter.email}
                         </a>
@@ -290,7 +290,7 @@ const ContactBlock = () => {
                         <a
                           href={`tel:${
                             data.file.childMarkdownRemark.frontmatter.phoneJaap
-                            }`}
+                          }`}
                         >
                           {data.file.childMarkdownRemark.frontmatter.phoneJaap}
                         </a>{' '}
@@ -299,7 +299,7 @@ const ContactBlock = () => {
                           href={`tel:${
                             data.file.childMarkdownRemark.frontmatter
                               .phoneRutger
-                            }`}
+                          }`}
                         >
                           {
                             data.file.childMarkdownRemark.frontmatter

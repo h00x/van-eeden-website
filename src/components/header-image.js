@@ -11,7 +11,7 @@ const TitleWrapper = styled.div`
   position: absolute;
   top: 40%;
   margin: 0 auto;
-  left: 0; 
+  left: 0;
   right: 0;
 `
 

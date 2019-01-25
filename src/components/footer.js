@@ -84,7 +84,9 @@ const Footer = () => {
       `}
       render={data => (
         <Wrapper>
-          <Text>© Copyright {date.getFullYear().toString()} Firma van Eeden Rzn.</Text>
+          <Text>
+            © Copyright {date.getFullYear().toString()} Firma van Eeden Rzn.
+          </Text>
           <Menu>
             <li>
               <a href="#first-item">

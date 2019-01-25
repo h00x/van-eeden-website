@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const LinkButton = styled.a`
@@ -20,5 +21,10 @@ const LinkButton = styled.a`
 const ButtonWhite = ({ children, to }) => (
   <LinkButton href={to}>{children}</LinkButton>
 )
+
+ButtonWhite.propTypes = {
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string,
+}
 
 export default ButtonWhite
