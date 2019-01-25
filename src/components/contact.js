@@ -113,8 +113,7 @@ const ContactBlock = () => {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     transition: border 0.2s ease-in-out;
     &:focus,
-    &:valid,
-    &:invalid {
+    &:valid {
       border-bottom: 2px solid #a668b2;
       + label {
         font-size: 75%;
@@ -236,7 +235,7 @@ const ContactBlock = () => {
                   <FormLabel htmlFor="name">Naam</FormLabel>
                 </FormGroup>
                 <FormGroup>
-                  <FormInput type="email" name="email" id="email" required />
+                  <FormInput type="text" name="email" id="email" required />
                   <FormLabel htmlFor="email">E-mailadres</FormLabel>
                 </FormGroup>
                 <FormGroup>
