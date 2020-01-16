@@ -14,5 +14,11 @@ images:
     image_list_item: /images/hyacint-6.jpg
   - alt: Hyacint 7
     image_list_item: /images/hyacint-7.jpg
+  - alt: Hyacint 8
+    image_list_item: /images/hy-new.jpg
+  - alt: Hyacint 9
+    image_list_item: /images/hy-new-3.jpg
+  - alt: Hyacint 10
+    image_list_item: /images/hy-new-2.jpg
 ---
 
